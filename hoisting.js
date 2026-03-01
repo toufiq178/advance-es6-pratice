@@ -105,5 +105,57 @@ const arr2 = [...arr1];
 
 arr2.push(4);
 
-console.log(arr1);
-console.log(arr2);
+// console.log(arr1);
+// console.log(arr2);
+
+const user = {
+  name: "Taj",
+  age: 22
+};
+
+user.age = 25 
+user.country = 'bangladesh'
+// console.log(user);
+
+
+// descture
+const {name , age = 25 , country = 'bangladesh' } = {
+  name: "Taj",
+  age: 22
+};
+
+// console.log(name , age , country);
+
+
+// ✅ Task 6: Advanced Function
+// Ekta function banao:
+// first parameter: multiplier
+// baki sob parameter: numbers (rest use kore)
+// sob number ke multiplier diye gun kore new array return korbe
+
+function multiply(multiplier , ...rest) {
+    
+    return rest.map(elem => multiplier * elem)
+}
+const arr = multiply(2, 5, 10, 15)
+
+// console.log(arr);
+
+
+// ✅ Task 7: Tricky One 🔥
+// Nicher code er output ki hobe?
+
+function test(a, b, ...rest) {
+//   console.log(...rest);
+}
+
+test(1,2,3,4,5);
+
+
+
+function combineArrays(...params) {
+    
+    console.log([...params[0],...params[1],...params[2]]);
+    
+}
+combineArrays([1,2], [3,4], [5,6])
